@@ -1,0 +1,31 @@
+.gradeInfo {
+  padding: 1rem;
+  box-shadow: 0px 0px 18px -8px rgba(0, 0, 0, 0.8);
+  -webkit-box-shadow: 0px 0px 18px -8px rgba(0, 0, 0, 0.8);
+  -moz-box-shadow: 0px 0px 18px -8px rgba(0, 0, 0, 0.8);
+  margin-bottom: 1.25rem;
+}
+.gradeInfoTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.05rem;
+  color: #555;
+  padding: 0 0 1rem 0rem;
+}
+.gradeInfoItem {
+  padding: 0.1rem 0;
+}
+.gradeInfoLable {
+  font-size: 1rem;
+  color: rgb(187, 186, 186);
+  font-weight: 800;
+}
+.gradeInfoValue {
+  font-size: 1.2rem;
+  padding: 0.3rem;
+}
+.gradeInfoList {
+  font-size: 1.2rem;
+  padding: 0.3rem;
+  list-style: none;
+}

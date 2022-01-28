@@ -1,0 +1,54 @@
+.card {
+  position: relative;
+  padding: 2rem;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0px 0px 18px -8px rgba(0, 0, 0, 0.8);
+  -webkit-box-shadow: 0px 0px 18px -8px rgba(0, 0, 0, 0.8);
+  -moz-box-shadow: 0px 0px 18px -8px rgba(0, 0, 0, 0.8);
+}
+.cardTitleContainer {
+  margin: 0.5rem 0;
+}
+.cardTitleLable {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+.cardTitle {
+  display: block;
+
+  letter-spacing: 0.1rem;
+  font-size: 2rem;
+  font-weight: 600;
+}
+.applicantlist {
+  list-style: none;
+}
+.applicantlistitem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.applicantButton {
+  width: 30%;
+  min-width: 6.25rem;
+  display: flex;
+  justify-content: space-between;
+}
+.applicantButtonCheck {
+  color: green;
+  font-size: 1.5rem !important;
+}
+.applicantButtonClear {
+  color: brown;
+  font-size: 1.5rem !important;
+}
+.applicantButtonInfo {
+  color: gray;
+  font-size: 1.5rem !important;
+}
+.cardButton {
+  position: absolute;
+  right: 10px;
+  bottom: 0;
+}
