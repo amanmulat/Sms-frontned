@@ -6,3 +6,15 @@
   display: flex;
   margin: 1.2rem;
 }
+.featuredYear {
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: 0.2rem;
+  color: #555;
+  padding: 0 0 1rem 1rem;
+}
+.createGradeButtonContainer {
+  display: flex;
+  justify-content: right;
+  margin-bottom: 0.5rem;
+}

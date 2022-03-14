@@ -1,0 +1,56 @@
+.roomEquipmentEdit {
+  background-color: hsla(0, 0%, 100%, 0.7);
+  max-width: 300px;
+  border-radius: 10px;
+  padding: 1rem;
+}
+.roomEditLabel {
+  text-align: center;
+  color: rgba(0, 0, 0, 0.6);
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 0.7rem;
+  line-height: 1.4375em;
+  letter-spacing: 0.00938em;
+  padding: 0;
+  position: relative;
+  display: block;
+  transform-origin: top left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 133%;
+}
+.roomEditValue {
+  text-align: center;
+  color: rgb(0, 0, 0);
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 0.9rem;
+  line-height: 1.4375em;
+  letter-spacing: 0.00938em;
+  padding: 0;
+  position: relative;
+  display: block;
+
+  max-width: 133%;
+}
+.itemValueContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.muiIcon {
+  font-size: 200px;
+}
+.incrementColor {
+  background-color: rgba(127, 255, 212, 0.535);
+}
+.decrementColor {
+  background-color: rgba(255, 0, 0, 0.261);
+}
+.roomEquipmentEditButton {
+  padding-top: 1rem;
+  display: flex;
+  justify-content: space-around;
+}

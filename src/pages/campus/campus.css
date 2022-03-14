@@ -1,0 +1,8 @@
+.campus {
+  flex: 4;
+  padding: 1.25rem;
+}
+.createCampusButtonContainer {
+  display: flex;
+  justify-content: right;
+}

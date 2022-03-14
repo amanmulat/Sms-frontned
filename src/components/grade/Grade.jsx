@@ -5,9 +5,7 @@ import SubjectBar from "./subjectbar/SubjectBar"
 function Grade() {
     const location = useLocation()
     const grade = location.state.grade
-    const enrolledstudents = grade.enrolledstudents.filter(obj => {
-        return obj.enrolled === true
-    })
+    
     return (
         <div className="grade">
             <GradeInfo

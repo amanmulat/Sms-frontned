@@ -1,0 +1,30 @@
+.roomCards {
+  padding: 1rem;
+}
+.roomCard {
+  background-color: rgb(242, 242, 242);
+  padding: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.roomCardTitleLabel {
+  font-size: 0.9rem;
+  font-weight: 600;
+  /* color: var(--main-text-color); */
+}
+.roomCardTitle {
+  font-size: 1.2rem;
+  color: var(--main-text-color);
+  font-weight: 600;
+}
+.roomHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.5rem 0.5rem 0.5rem;
+}
+.roomEdit {
+  position: absolute;
+  right: 10px;
+  bottom: 0;
+}

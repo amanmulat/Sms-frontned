@@ -12,7 +12,13 @@ html {
   font-size: 16px;
   --main-text-color: darkblue;
   --main-icon-color: #555;
+  --box-shadow-offset-x: 0px;
+  --box-shadow-offset-y: 0px;
+  --box-shadow-blur: 18px;
+  --box-shadow-spread: -8;
+  --box-shadow-color: rgba(0, 0, 0, 0.8);
 }
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -23,11 +29,28 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.shadow {
+  box-shadow: 0px 0px 18px -8px rgba(0, 0, 0, 0.8);
+  -webkit-box-shadow: 0px 0px 18px -8px rgba(0, 0, 0, 0.8);
+  -moz-box-shadow: 0px 0px 18px -8px rgba(0, 0, 0, 0.8);
+}
 .dullLabel {
   font-size: 0.9rem;
-  color: rgb(187, 186, 186);
+  font-weight: 800;
+  color: rgb(138, 138, 138);
+}
+.formInputs {
+  margin-bottom: 1.59rem;
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+.flexAndPadding {
+  flex: 4;
+  padding: 1.25rem;
+}
+.link {
+  text-decoration: none;
+  color: inherit;
 }

@@ -3,10 +3,10 @@ import "./card.css"
 import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
 import { Check, Clear , Info} from '@mui/icons-material';
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 import UserInfo from "../userinfo/UserInfo";
 import { useGrade } from "../../context/context";
-import { Api } from "../../api/api";
+
 
 function Card({ title, campus, list, button, applicantlist }) {
     
@@ -17,9 +17,9 @@ function Card({ title, campus, list, button, applicantlist }) {
         setPopup(!popup)
     }
     return (
-        <div className="card">
+        <div className="card shadow">
             <div className="cardTitleContainer">
-                <h3 className="cardTitleLable">Grade</h3>
+                <h3 className="cardTitleLabel">Grade</h3>
                 <span className="cardTitle">{title}</span>
             </div>
             

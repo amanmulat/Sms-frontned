@@ -5,7 +5,9 @@ const ContextProvider = React.createContext({
     grade: null, 
     getGrade: () => { },
     studentList : null ,
-    getApplicants : ()=>{}
+    getApplicants: () => { }, 
+    schoolInfo: null , 
+    formHelper: ()=>{}
 })
 
 export function useGrade() {
@@ -61,15 +63,30 @@ export function TheContextProvider({ children }) {
             } catch (error) {
               console.log(error)
             }
+    }
+    const [schoolInfo, setSchoolInfo] = useState();
+    const formHelper = async ({ school_id }) => {
+        try {
+            const helper = await Api.post('/admin/formhelper', { school_id: school_id })
+            console.log(helper.data)
+            if (helper) {
+                setSchoolInfo(helper)
+                console.log({data : schoolInfo , message : "context state"})
+                
+            }
+        } catch (error) {
+            console.log(error)
         }
-    
+    }
     return (
         <ContextProvider.Provider value={{
             grade: grades, 
             getGrade: getGrade,
             studentList : studentList,
             getApplicants: getApplicants,
-            enrollhandler : enrollhandler
+            enrollhandler: enrollhandler,
+            schoolInfo: schoolInfo, 
+            formHelper: formHelper
         }}  >
                 {children}
         </ContextProvider.Provider >

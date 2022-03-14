@@ -22,10 +22,7 @@
   list-style: none;
   padding: 0.3rem;
 }
-.link {
-  text-decoration: none;
-  color: inherit;
-}
+
 .sidebarListItem {
   padding: 0.3rem;
   cursor: pointer;

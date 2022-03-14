@@ -2,7 +2,7 @@ import React from 'react';
 import './gradeInfo.css'
 function GradeInfo({gradeTitle , year , students , campus}) {
     return (
-         <div className="gradeInfo">
+         <div className="gradeInfo shadow">
                 <h2 className="gradeInfoTitle">
                     Grade Info
                 </h2>

@@ -1,6 +1,6 @@
 
 import './sidebar.css'
-import {LineStyle , TrendingUp , Analytics , PersonOutline , AttachMoney , Report ,Email ,Chat ,Forum, ManageAccounts } from '@mui/icons-material';
+import {LineStyle ,  Analytics , PersonOutline , AttachMoney , Report ,Email ,Chat ,Forum, ManageAccounts ,SettingsApplications, Apartment } from '@mui/icons-material';
 import { Link , useLocation } from 'react-router-dom';
 
 export default function Sidebar() {
@@ -20,12 +20,14 @@ export default function Sidebar() {
                         </Link>
                         <Link to="studentlist" className='link'>
                            <li className={`sidebarListItem ${splitLocation[1]==="studentlist"? "active" : "" }`}>
-                                <Analytics className='sidebarIcons'/> Analytics
+                                <SettingsApplications className='sidebarIcons'/> Manage Grades
                             </li>
                         </Link>
-                         <li className="sidebarListItem">
-                            <TrendingUp className='sidebarIcons'/> Sales
-                        </li>
+                        <Link to="managecampus" className='link'>
+                           <li className={`sidebarListItem ${splitLocation[1]==="managecampus" ? "active" : "" }`}>
+                               <Apartment className='sidebarIcons'/> Manage Campus
+                            </li>
+                        </Link>
                     </div>
                 </div>
                 <div className="sidebarMenu">

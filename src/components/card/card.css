@@ -3,14 +3,11 @@
   padding: 2rem;
   border-radius: 10px;
   cursor: pointer;
-  box-shadow: 0px 0px 18px -8px rgba(0, 0, 0, 0.8);
-  -webkit-box-shadow: 0px 0px 18px -8px rgba(0, 0, 0, 0.8);
-  -moz-box-shadow: 0px 0px 18px -8px rgba(0, 0, 0, 0.8);
 }
 .cardTitleContainer {
   margin: 0.5rem 0;
 }
-.cardTitleLable {
+.cardTitleLabel {
   font-size: 1.2rem;
   font-weight: 400;
 }

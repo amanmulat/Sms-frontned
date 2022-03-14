@@ -1,0 +1,33 @@
+.roomEditContainer {
+  overflow: hidden;
+  background-color: hsla(240, 2%, 92%, 0.33);
+  padding: 1rem;
+}
+.roomeditTitle {
+  color: rgba(0, 0, 0, 0.6);
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 0.8rem;
+  line-height: 1.4375em;
+  letter-spacing: 0.00938em;
+  padding: 0;
+  position: relative;
+  display: block;
+  transform-origin: top left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 133%;
+}
+.roomEquipmentEditTitleBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.roomEditButtonContainer {
+  display: flex;
+  justify-content: right;
+}
+.roomEditButton {
+  margin-left: 2rem;
+}

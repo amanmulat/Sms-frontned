@@ -1,12 +1,8 @@
 import React from 'react';
 import "./subjectBar.css"
-import Math from '../../../img/Math.svg'
-import English from '../../../img/English.svg'
+
 function SubjectBar({ subject }) {
-    const obh = {
-        Math: Math, 
-        English : English
-    }
+    
     return (
         <div className='subjectBar'>
             <h2 className="gradeInfoTitle">

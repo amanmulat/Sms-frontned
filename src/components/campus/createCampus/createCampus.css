@@ -1,0 +1,10 @@
+.createCampus {
+  padding: 3rem;
+  margin-bottom: 1.5rem;
+}
+.addbutton {
+  color: var(--main-text-color);
+}
+.muiButton {
+  color: white;
+}

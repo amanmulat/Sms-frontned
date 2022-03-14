@@ -7,7 +7,6 @@ function FeaturedGrade({ list, xs = 12, md = 6, lg = 4, studentList, gradeList ,
     
     return (
         <div className='featured'>
-         <h2 className="featuredYear">2022</h2>
             <Grid container spacing={3}>
                 
                 {list && list.map( listitem => {
