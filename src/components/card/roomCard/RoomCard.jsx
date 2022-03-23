@@ -54,7 +54,7 @@ function RoomCards({title , roomList , campusId,  xs = {xs}, md = {md}, lg = {lg
           {roomList?.map(room => {
                   return (
                       <Grid item xs={xs} md={md} lg={lg}>
-                          {room &&  <RoomCard key={room._id} room={room}/>}
+                          {room &&  <RoomCard campusId={campusId} key={room._id} room={room}/>}
                       </Grid>
                   )
               }
@@ -64,7 +64,7 @@ function RoomCards({title , roomList , campusId,  xs = {xs}, md = {md}, lg = {lg
     </div>
   )
 }
-function RoomCard({ room }) {
+function RoomCard({ room , campusId}) {
   const [dialogOpenState, setDialogOpenState] = useState(false)
   console.log(dialogOpenState)
   return (
@@ -93,7 +93,7 @@ function RoomCard({ room }) {
           <Button onClick={()=>setDialogOpenState(true)} >Edit</Button>
       </div>
       
-      <RoomEdit room={room} handleClose={()=>setDialogOpenState(!dialogOpenState)} open={dialogOpenState} />
+      <RoomEdit room={room} campusId={campusId} handleClose={()=>setDialogOpenState(!dialogOpenState)} open={dialogOpenState} />
       
     </div>
   )

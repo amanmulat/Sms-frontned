@@ -1,12 +1,13 @@
 import { LocalizationProvider, TimePicker } from '@mui/lab'
 import { Button, Collapse, Dialog, Grid, TextField } from '@mui/material'
 import React, { useEffect, useRef, useState } from 'react'
-
+import {Api } from '../../../api/api.js'
 import DateAdapter from '@mui/lab/AdapterDateFns'
 import './roomEdit.css'
 
 import { RoomEquipmentFill, RoomIdentity, TimeInterval, TimeIntervalContainer } from '../../roomAdd/roomAddComponents'
-function RoomEdit({ open, handleClose , room }) {
+import { useMutation, useQueryClient } from 'react-query'
+function RoomEdit({ open, handleClose , room , campusId}) {
   //useRef
   const roomName = useRef('')
   const roomCapacity = useRef('')
@@ -16,10 +17,26 @@ function RoomEdit({ open, handleClose , room }) {
   const [location, setLocation] = useState()
   const [roomEquipments, setRoomEquipments] = useState([])
   const [occupationState, setOccupationState] = useState(room.occupation)
-
   
-  //functions
-  const show = () => {
+  // functions
+  const formEditApi = async () => {
+    const editForm = await Api.post('/admin/editroom', {
+      campus_id: campusId,
+      room: {
+        room_id: room._id,
+        name: roomName.current.value, 
+        capacity: roomCapacity.current.value, 
+        kind: type.title, 
+        location: location.title,
+        equipment: roomEquipments,
+        occupation : occupationState
+      }
+    })
+    return editForm
+  }
+  const show = async () => {
+    await mutation.mutate()
+    console.log({status : mutation.status})
     console.log({
       name: roomName.current.value, 
       capacity: roomCapacity.current.value, 
@@ -30,6 +47,14 @@ function RoomEdit({ open, handleClose , room }) {
     })
   }
   
+  //useQuery 
+  const queryClient = useQueryClient()
+  const mutation = useMutation(formEditApi , {
+    onSuccess: () => {
+      queryClient.invalidateQueries(["getcampus"])
+    }
+  })
+
  
   //useEffect
   useEffect(() => {
@@ -40,7 +65,7 @@ function RoomEdit({ open, handleClose , room }) {
   
   //bugs 
   // coloring the room equipment items is buggy when removing or adding new ewquip items 
-  
+  console.log(room)
   return (
     <Dialog fullWidth={true} maxWidth="lg" open={open} onClose={handleClose} scroll="body">
       <div className="roomEditContainer">
